@@ -91,8 +91,8 @@ export function EngineeringNotes() {
     <section id="notes" className="section-shell">
       <SectionHeading 
         kicker="Engineering Notes" 
-        title="Lessons & Technical Deep Dives" 
-        copy="Experiments, optimizations, and technical writeups from my journey building web products and automation pipelines." 
+        title="Insights Behind the Systems." 
+        copy="Deep dives into experiments, architecture decisions, model development, optimization strategies, and lessons learned while building data-driven products." 
       />
 
       <div className="grid gap-4 md:grid-cols-2">

@@ -38,7 +38,7 @@ export function Contact() {
 
   return (
     <section id="contact" className="section-shell">
-      <SectionHeading kicker="Contact" title="Ready to connect, collaborate, or review the resume." copy="A focused contact panel for recruiters, collaborators, and teams looking for a curious engineer with strong product instincts." />
+      <SectionHeading kicker="Contact" title="Let's Build Something Intelligent Together." copy="Open to opportunities in Data Science, Analytics, AI Engineering, and Machine Learning where data can be transformed into meaningful impact." />
       <GlassCard className="grid gap-6 p-5 md:grid-cols-[1fr_.8fr] md:p-8">
         <form className="space-y-4" onSubmit={handleSubmit}>
           <h3 className="text-lg font-bold text-white mb-2">Send a Message</h3>

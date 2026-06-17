@@ -4,23 +4,23 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://aniket-os.local"),
   title: {
-    default: "Aniket Dubey | Software Engineer Portfolio",
+    default: "Aniket Dubey | Data Scientist | AI & Analytics Engineer",
     template: "%s | Aniket Dubey"
   },
-  description: "A premium developer operating system portfolio for Aniket Dubey, focused on modern web development, AI applications, automation systems, and continuous learning.",
-  keywords: ["Aniket Dubey", "Software Engineer", "Next.js", "AI Applications", "Automation", "Portfolio"],
+  description: "Portfolio showcasing Data Science, Machine Learning, Analytics Engineering, AI Applications, Business Intelligence Dashboards, and Data-Driven Solutions.",
+  keywords: ["Aniket Dubey", "Data Scientist", "AI Engineer", "Analytics Engineer", "Machine Learning", "BeatMetrics", "Spotify Analytics", "PostgreSQL", "Portfolio"],
   authors: [{ name: "Aniket Dubey" }],
   openGraph: {
-    title: "Aniket Dubey",
-    description: "A personal developer operating system for modern web, AI, and automation engineering.",
+    title: "Aniket Dubey | Data Scientist | AI & Analytics Engineer",
+    description: "Portfolio showcasing Data Science, Machine Learning, Analytics Engineering, AI Applications, Business Intelligence Dashboards, and Data-Driven Solutions.",
     type: "website",
     url: "https://aniket-os.local",
     siteName: "Aniket Dubey"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aniket Dubey",
-    description: "Software engineer portfolio built as a premium personal operating system."
+    title: "Aniket Dubey | Data Scientist | AI & Analytics Engineer",
+    description: "Portfolio showcasing Data Science, Machine Learning, Analytics Engineering, AI Applications, Business Intelligence Dashboards, and Data-Driven Solutions."
   },
   robots: {
     index: true,
@@ -40,15 +40,30 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Aniket Dubey",
-    jobTitle: "Software Engineer",
+    jobTitle: "Data Scientist | AI & Analytics Engineer",
     url: "https://aniket-os.local",
-    knowsAbout: ["Modern Web Development", "AI Applications", "Automation Systems", "Next.js", "TypeScript"]
+    knowsAbout: ["Data Science", "Machine Learning", "AI Applications", "Business Intelligence", "PostgreSQL", "Python", "Data Visualization"]
+  };
+
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "BeatMetrics",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    description: "Analyze artist growth, audience engagement, track performance, and listening trends through powerful Spotify-powered analytics dashboards.",
+    url: "https://github.com/aniketdubeyad/BeatMetrics",
+    creator: {
+      "@type": "Person",
+      name: "Aniket Dubey"
+    }
   };
 
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }} />
         {children}
       </body>
     </html>

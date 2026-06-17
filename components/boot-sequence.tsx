@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const lines = ["BOOTING ANIKET_OS...", "Loading projects...", "Loading skills...", "Loading automation systems...", "System ready."];
+const lines = ["BOOTING ANIKET_OS...", "Loading projects...", "Loading skills...", "System ready."];
 
 export function BootSequence() {
   const [done, setDone] = useState(false);

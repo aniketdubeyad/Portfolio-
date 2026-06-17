@@ -5,14 +5,13 @@ import { GlassCard } from "@/components/glass-card";
 import { SectionHeading } from "@/components/section-heading";
 
 const responses: Record<string, string> = {
-  help: "Commands: help, whoami, skills, projects, roadmap, resume, contact, automation",
-  whoami: "Aniket Dubey - Software Engineer focused on modern web, AI applications, automation systems, and continuous learning.",
-  skills: "Next.js, React, TypeScript, Tailwind, APIs, databases, AI workflows, n8n, cloud fundamentals.",
-  projects: "Lead Intelligence Engine, AI SaaS Command Center, Modern Portfolio OS, Learning Roadmap Tracker.",
-  roadmap: "System design, AI agents, advanced Next.js, automation engineering, and cloud technologies.",
+  help: "Commands: help, whoami, skills, projects, roadmap, resume, contact",
+  whoami: "Aniket Dubey - Data Scientist | AI & Analytics Engineer focused on analytics, machine learning, automation, and intelligent systems.",
+  skills: "Analytics: Excel, SQL, Power BI, Tableau, KPI Reporting | Programming: Python, Pandas, NumPy, Data Wrangling, Automation | Machine Learning: Scikit-Learn, Regression, Classification, Clustering | AI: LLM Applications, Prompt Engineering, RAG Basics, AI Workflows, Agentic Systems | Data Science: EDA, Statistics, Data Cleaning, Visualization, Model Evaluation | Cloud & Tools: Git, GitHub, Jupyter, Streamlit, AWS Basics",
+  projects: "BeatMetrics (Spotify Analytics Dashboard), AI Resume Optimizer (ATS Analytics Engine), Portfolio OS (Aniket OS)",
+  roadmap: "Python -> SQL -> Analytics -> Visualization -> Machine Learning -> AI Engineering -> Intelligent Systems",
   resume: "Opening resume route: /resume.pdf",
-  contact: "Email: aniket310dubey@gmail.com | GitHub: https://github.com/aniketdubeyad | LinkedIn: https://www.linkedin.com/in/aniiket310dubey",
-  automation: "Instagram Lead Finder -> Data Processing -> AI Analysis -> Excel Export -> Email Delivery"
+  contact: "Email: aniket310dubey@gmail.com | GitHub: https://github.com/aniketdubeyad | LinkedIn: https://www.linkedin.com/in/aniiket310dubey"
 };
 
 export function TerminalSection() {
@@ -28,7 +27,7 @@ export function TerminalSection() {
   };
   return (
     <section id="terminal" className="section-shell deep-section">
-      <SectionHeading kicker="Terminal" title="An authentic command surface for quick discovery." copy="Keyboard-first visitors can inspect the same portfolio data from a small developer terminal." />
+      <SectionHeading kicker="Terminal" title="Explore the Portfolio Like a Dataset." copy="A keyboard-first command interface that lets visitors navigate projects, insights, technologies, and analytics workflows with speed and precision." />
       <GlassCard className="overflow-hidden">
         <div className="flex gap-2 border-b border-white/10 px-5 py-4"><span className="h-3 w-3 rounded-full bg-rose-300" /><span className="h-3 w-3 rounded-full bg-amber-200" /><span className="h-3 w-3 rounded-full bg-lime-300" /></div>
         <div className="min-h-80 p-5 font-mono text-sm text-white/72">

@@ -8,10 +8,19 @@ import { Briefcase, Download, ExternalLink, FolderGit, Github, Linkedin, MapPin,
 import { scrollToSection } from "@/lib/utils";
 
 export function RecruiterSnapshot() {
-  const techStack = ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "n8n"];
+  const coreStrengths = [
+    "Data Analytics",
+    "Machine Learning",
+    "AI Engineering",
+    "Dashboard Development",
+    "Data Visualization",
+    "API Integration",
+    "Automation Systems",
+    "Business Intelligence"
+  ];
   const recentProjects = [
-    { name: "Lead Intelligence Engine", href: "projects" },
     { name: "AI Resume Optimizer", href: "projects" },
+    { name: "BeatMetrics", href: "projects" },
     { name: "Portfolio OS", href: "projects" }
   ];
 
@@ -19,8 +28,8 @@ export function RecruiterSnapshot() {
     <section id="snapshot" className="section-shell">
       <SectionHeading
         kicker="TL;DR Profile"
-        title="Quick Recruiter Snapshot"
-        copy="Understand my background, core expertise, and latest focus areas in under 10 seconds."
+        title="Why Recruiters Stop Scrolling"
+        copy="A rapid overview of my skills, projects, impact, and technical strengths—designed to deliver the signal before the interview."
       />
       
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -38,13 +47,16 @@ export function RecruiterSnapshot() {
                 <span className="text-xs uppercase tracking-wider font-semibold">Candidate</span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Aniket Dubey</h3>
-              <p className="text-sm text-white/80 flex items-center gap-2 mt-3">
+              <p className="text-sm text-white/80 flex items-center gap-2 mt-3 font-semibold">
                 <Briefcase size={16} className="text-white/40" />
-                Software Engineer
+                Data Scientist | AI & Analytics Engineer
               </p>
               <p className="text-sm text-white/80 flex items-center gap-2 mt-2">
                 <MapPin size={16} className="text-white/40" />
                 India
+              </p>
+              <p className="text-xs text-white/60 mt-3 leading-relaxed border-t border-white/5 pt-3">
+                Data Scientist and AI Engineer focused on analytics, machine learning, automation, and intelligent systems.
               </p>
             </div>
             <div className="mt-6 text-xs text-white/50 border-t border-white/5 pt-3">
@@ -64,13 +76,13 @@ export function RecruiterSnapshot() {
             <div>
               <div className="flex items-center gap-2 text-lime-200 mb-4">
                 <Terminal size={18} />
-                <span className="text-xs uppercase tracking-wider font-semibold">Core Stack</span>
+                <span className="text-xs uppercase tracking-wider font-semibold">Core Strengths</span>
               </div>
               <div className="flex flex-wrap gap-2">
-                {techStack.map((tech) => (
+                {coreStrengths.map((tech) => (
                   <span 
-                    key={tech} 
-                    className="rounded-full bg-white/[0.06] border border-white/10 px-2.5 py-1 text-xs text-white/80 font-medium hover:border-lime-200/40 hover:text-white transition"
+                     key={tech} 
+                     className="rounded-full bg-white/[0.06] border border-white/10 px-2.5 py-1 text-xs text-white/80 font-medium hover:border-lime-200/40 hover:text-white transition"
                   >
                     {tech}
                   </span>
@@ -78,7 +90,7 @@ export function RecruiterSnapshot() {
               </div>
             </div>
             <div className="mt-6 text-xs text-white/50 border-t border-white/5 pt-3">
-              Full-stack web & workflows
+              Data science, ML, & analytics
             </div>
           </GlassCard>
         </motion.div>

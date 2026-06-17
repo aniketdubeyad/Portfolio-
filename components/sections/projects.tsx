@@ -8,13 +8,8 @@ import { projects } from "@/data/portfolio";
 import { ChevronDown, ChevronUp, ExternalLink, Github, Terminal, AlertTriangle, Lightbulb, TrendingUp } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface ProjectsProps {
-  isOpenToWork?: boolean;
-  onOpenKernelAction: (projectTitle: string, isRecruiter?: boolean) => void;
-}
-
-export function Projects({ isOpenToWork = true, onOpenKernelAction }: ProjectsProps) {
-  const [activeTitle, setActiveTitle] = useState<string | null>("Lead Intelligence Engine");
+export function Projects() {
+  const [activeTitle, setActiveTitle] = useState<string | null>("AI Resume Optimizer");
   const [supportsHover, setSupportsHover] = useState(false);
 
   useEffect(() => {
@@ -45,8 +40,8 @@ export function Projects({ isOpenToWork = true, onOpenKernelAction }: ProjectsPr
     <section id="projects" className="section-shell">
       <SectionHeading 
         kicker="Case Studies" 
-        title="Product-Minded Engineering Work" 
-        copy="Detailed breakdowns of systems I have designed and deployed, highlighting challenges, architectural decisions, and measurable outcomes." 
+        title="Where Data Meets Real-World Impact." 
+        copy="A collection of analytics platforms, AI applications, automation systems, and machine learning projects built to solve meaningful problems and generate measurable outcomes." 
       />
       
       <div className="relative border-l-2 border-white/10 pl-6 ml-4 md:pl-10 md:ml-8 space-y-12">
@@ -174,22 +169,28 @@ export function Projects({ isOpenToWork = true, onOpenKernelAction }: ProjectsPr
                           </div>
                         </div>
                       </div>
-                      <div className="mt-6 border-t border-white/5 pt-5">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            onOpenKernelAction(project.title, false);
-                          }}
-                          className={cn(
-                            "w-full text-xs font-bold py-3 px-4 rounded-xl border flex items-center justify-center gap-2 transition duration-300 cursor-pointer",
-                            isOpenToWork 
-                              ? "bg-green-500/10 border-green-500/30 text-green-300 hover:bg-green-500/20 hover:border-green-500/40 hover:shadow-[0_0_20px_rgba(34,197,94,0.15)]" 
-                              : "bg-cyan-500/10 border-cyan-500/30 text-cyan-200 hover:bg-cyan-500/20 hover:border-cyan-500/40 hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]"
-                          )}
-                        >
-                          <Terminal size={13} /> Access Development Records
-                        </button>
-                      </div>
+
+                      {project.features && (
+                        <div className="mt-8 border-t border-white/10 pt-6">
+                          <h4 className="text-xs uppercase tracking-wider font-semibold text-cyan-200 mb-4 flex items-center gap-2">
+                            Key Features
+                          </h4>
+                          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {project.features.map((feature) => (
+                              <div key={feature.title} className="rounded-2xl border border-white/5 bg-white/[0.01] p-4 flex flex-col justify-between hover:border-cyan-200/20 transition duration-300">
+                                <div>
+                                  <h5 className="font-bold text-white text-sm mb-1">{feature.title}</h5>
+                                  <p className="text-xs leading-5 text-white/60">{feature.description}</p>
+                                </div>
+                                {feature.supportingText && (
+                                  <p className="mt-3 text-[10px] font-mono text-cyan-300/80 uppercase tracking-wider">{feature.supportingText}</p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { GlassCard } from "@/components/glass-card";
 import { SectionHeading } from "@/components/section-heading";
 import { philosophies } from "@/data/portfolio";
@@ -12,7 +12,7 @@ interface PhilosophyProps {
   isRecruiterContext?: boolean;
 }
 
-export function Philosophy({ isOpenToWork = true, isRecruiterContext = false }: PhilosophyProps) {
+export function Philosophy({ isOpenToWork = true }: PhilosophyProps) {
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
   const accentText = isOpenToWork ? "text-green-300" : "text-cyan-200";
@@ -24,9 +24,9 @@ export function Philosophy({ isOpenToWork = true, isRecruiterContext = false }: 
   return (
     <section id="building" className="section-shell">
       <SectionHeading 
-        kicker="Engineering Philosophy" 
+        kicker="Analytics Philosophy" 
         title="The Manual" 
-        copy="The principles that guide how I build software, solve problems, and learn new technologies." 
+        copy="The principles that guide how I analyze data, construct models, and extract business intelligence." 
       />
       
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
@@ -83,7 +83,7 @@ export function Philosophy({ isOpenToWork = true, isRecruiterContext = false }: 
                   >
                     <div className="mt-4 pt-4 border-t border-white/5 text-xs text-white/50 leading-relaxed font-mono">
                       <span className={cn("font-bold block mb-1.5 uppercase tracking-widest text-[9px]", accentText)}>
-                        // Real-World Execution
+                        {"// Real-World Execution"}
                       </span>
                       {item.example}
                     </div>

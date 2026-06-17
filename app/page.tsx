@@ -8,9 +8,7 @@ import { Nav } from "@/components/nav";
 import { ScrollProgress } from "@/components/scroll-progress";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { About } from "@/components/sections/about";
-import { AutomationLab } from "@/components/sections/automation-lab";
 import { Contact } from "@/components/sections/contact";
-import { Philosophy } from "@/components/sections/philosophy";
 import { Hero } from "@/components/sections/hero";
 import { Projects } from "@/components/sections/projects";
 import { RecruiterSnapshot } from "@/components/sections/recruiter-snapshot";
@@ -18,21 +16,12 @@ import { EngineeringNotes } from "@/components/sections/engineering-notes";
 import { RecruiterView } from "@/components/sections/recruiter-view";
 import { SkillNetwork } from "@/components/sections/skill-network";
 import { TerminalSection } from "@/components/sections/terminal";
-import { KernelPanel } from "@/components/kernel-panel";
+import { ExtraQuote } from "@/components/sections/extra-quote";
 
 export default function Home() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [recruiterMode, setRecruiterMode] = useState(false);
   const [isOpenToWork, setIsOpenToWork] = useState(true);
-  const [kernelOpen, setKernelOpen] = useState(false);
-  const [kernelProject, setKernelProject] = useState("");
-  const [isKernelRecruiter, setIsKernelRecruiter] = useState(false);
-
-  const openKernel = (projectTitle: string, isRecruiter: boolean = false) => {
-    setKernelProject(projectTitle);
-    setIsKernelRecruiter(isRecruiter);
-    setKernelOpen(true);
-  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -106,13 +95,12 @@ export default function Home() {
         isOpenToWork={isOpenToWork}
         onToggleOpenToWorkAction={toggleOpenToWork}
       />
-      <CommandPalette open={paletteOpen} setOpen={setPaletteOpen} />
+      <CommandPalette open={paletteOpen} setOpenAction={setPaletteOpen} />
       {recruiterMode ? (
         <RecruiterView 
           onExitAction={() => setRecruiterMode(false)} 
           isOpenToWork={isOpenToWork} 
           onToggleOpenToWorkAction={toggleOpenToWork} 
-          onOpenKernelAction={openKernel}
         />
       ) : (
         <main>
@@ -120,21 +108,13 @@ export default function Home() {
           <RecruiterSnapshot />
           <About />
           <SkillNetwork />
-          <AutomationLab />
-          <Projects isOpenToWork={isOpenToWork} onOpenKernelAction={openKernel} />
+          <Projects />
           <EngineeringNotes />
           <TerminalSection />
-          <Philosophy isOpenToWork={isOpenToWork} />
+          <ExtraQuote />
           <Contact />
         </main>
       )}
-      <KernelPanel 
-        isOpen={kernelOpen} 
-        onCloseAction={() => setKernelOpen(false)} 
-        projectTitle={kernelProject} 
-        isRecruiterContext={isKernelRecruiter}
-        isOpenToWork={isOpenToWork}
-      />
     </>
   );
 }

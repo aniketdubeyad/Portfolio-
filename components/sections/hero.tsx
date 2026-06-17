@@ -16,12 +16,15 @@ export function Hero() {
   return (
     <section id="hero" className="section-shell grid min-h-screen items-center gap-10 pt-28 lg:grid-cols-[1.02fr_.98fr]">
       <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-        <p className="kicker mb-4">ANIKET DUBEY / PORTFOLIO OS</p>
+        <p className="kicker mb-4">ANIKET DUBEY / DATA PORTFOLIO</p>
         <h1 className="text-balance text-4xl font-semibold tracking-normal text-white md:text-5xl lg:text-6xl">
-          Software Engineer Building AI-Powered Products & Automation Systems
+          Data Scientist | AI & Analytics Engineer
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-white/70">
-          I build web applications, automation workflows, and AI tools using Next.js, TypeScript, Node.js, and modern cloud technologies.
+        <p className="mt-4 text-cyan-200 text-lg md:text-xl font-medium max-w-2xl leading-relaxed">
+          Turning Data into Decisions, Insights into Impact.
+        </p>
+        <p className="mt-6 max-w-2xl text-base leading-7 text-white/70">
+          I design intelligent analytics systems that uncover patterns, predict outcomes, and transform complex datasets into actionable business intelligence through machine learning, automation, and AI.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Button onClick={() => scrollToSection("projects")}><Sparkles size={18} />View Projects</Button>

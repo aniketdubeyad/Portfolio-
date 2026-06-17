@@ -7,16 +7,14 @@ import { Button } from "@/components/ui/button";
 import { Briefcase, Download, FolderGit, Github, Linkedin, Mail, MapPin, Sparkles, Terminal, AlertTriangle, Lightbulb, TrendingUp } from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
 import { cn } from "@/lib/utils";
-import { Philosophy } from "@/components/sections/philosophy";
 
 interface RecruiterViewProps {
   onExitAction: () => void;
   isOpenToWork: boolean;
   onToggleOpenToWorkAction: () => void;
-  onOpenKernelAction: (projectTitle: string, isRecruiter?: boolean) => void;
 }
 
-export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAction, onOpenKernelAction }: RecruiterViewProps) {
+export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAction }: RecruiterViewProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -46,17 +44,17 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
   };
 
   const stats = [
-    { label: "Projects Built", value: "18+" },
-    { label: "Automation Workflows", value: "9+" },
-    { label: "Specialist Area", value: "Next.js + TS" },
-    { label: "Core Focus", value: "AI & Automation" }
+    { label: "Data Products", value: "5+" },
+    { label: "Datasets Analyzed", value: "10K+" },
+    { label: "Specialist Area", value: "Python + SQL" },
+    { label: "Core Focus", value: "Data & Analytics" }
   ];
 
   const technicalImpacts = [
     {
-      title: "Lead Intelligence Engine",
-      description: "Automated prospect discovery, AI bio analysis, and outreach spreadsheet generation.",
-      impact: "Reduced manual lead research loops into a repeatable, zero-waste workflow."
+      title: "BeatMetrics",
+      description: "Aggregates Spotify performance metrics and user listening cohorts for data analytics.",
+      impact: "Provides artists with actionable music intelligence and demographic listener insights."
     },
     {
       title: "AI Resume Optimizer",
@@ -65,18 +63,18 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
     },
     {
       title: "Portfolio OS",
-      description: "Developed an interactive portfolio platform with recruiter experience toggles and advanced UI architecture.",
-      impact: "Demonstrates production frontend engineering, product thinking, and system design."
+      description: "Developed an interactive analytics dashboard and portfolio operating system.",
+      impact: "Communicates candidate data story, skill graph, and recruiter snapshot in real-time."
     }
   ];
 
   const featuredProject = {
-    title: "Lead Intelligence Engine",
-    problem: "Manual lead collection was repetitive and time-consuming.",
-    solution: "Built an automated workflow using APIs, AI processing, enrichment systems, and spreadsheet exports.",
-    technologies: ["Next.js", "Node.js", "n8n", "OpenAI API", "Google Sheets API"],
-    outcome: "Created a scalable lead-generation workflow that significantly reduced manual effort.",
-    github: "https://github.com/aniketdubeyad",
+    title: "BeatMetrics",
+    problem: "Streaming platforms generate massive amounts of performance data, but artists and listeners often lack accessible tools to understand trends, audience behavior, and growth opportunities.",
+    solution: "Built BeatMetrics, a data-driven analytics platform that aggregates Spotify insights and transforms raw metrics into meaningful visualizations and actionable intelligence.",
+    technologies: ["React", "TypeScript", "Vite", "Recharts", "PostgreSQL", "Python", "SQLite"],
+    outcome: "Created a music analytics engine that processes 10K+ streaming events, delivering interactive dashboards with real-time insight generation.",
+    github: "https://github.com/aniketdubeyad/BeatMetrics",
     demo: "#"
   };
 
@@ -141,17 +139,17 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
                     <div className="flex-1">
                       <h3 className="text-sm font-extrabold text-green-300 flex items-center gap-2 tracking-wider">
                         <span className="h-2.5 w-2.5 rounded-full bg-green-400 animate-ping" />
-                        🟢 OPEN TO SOFTWARE ENGINEERING OPPORTUNITIES
+                        🟢 OPEN TO DATA SCIENCE & AI OPPORTUNITIES
                       </h3>
                       
                       <div className="grid md:grid-cols-2 gap-4 mt-4 text-xs">
                         <div>
                           <p className="font-bold text-white/50 mb-1.5 uppercase tracking-wider">Currently Seeking:</p>
                           <ul className="space-y-1 text-white/80 font-medium">
-                            <li>&bull; Software Engineer</li>
-                            <li>&bull; Frontend Engineer</li>
-                            <li>&bull; Full Stack Engineer</li>
-                            <li>&bull; AI / Automation Engineer</li>
+                            <li>&bull; Data Scientist</li>
+                            <li>&bull; AI & Analytics Engineer</li>
+                            <li>&bull; Machine Learning Engineer</li>
+                            <li>&bull; Data Analyst / BI Specialist</li>
                           </ul>
                         </div>
                         
@@ -188,7 +186,7 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-6">
                   <div>
                     <h1 className="text-4xl font-extrabold text-white">Aniket Dubey</h1>
-                    <p className={cn("text-lg font-semibold mt-1 transition-colors duration-300", accentText)}>Software Engineer</p>
+                    <p className={cn("text-lg font-semibold mt-1 transition-colors duration-300", accentText)}>Data Scientist | AI & Analytics Engineer</p>
                     <div className="flex flex-wrap gap-4 mt-3 text-xs text-white/50">
                       <span className="flex items-center gap-1"><MapPin size={14} /> India</span>
                       <span className="flex items-center gap-1"><Briefcase size={14} /> Open to remote & relocation</span>
@@ -227,10 +225,10 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
                   <div className="rounded-2xl border border-white/5 bg-white/[0.01] p-5">
                     <h3 className="text-xs uppercase tracking-wider font-bold text-white/40 mb-2">Professional Summary</h3>
                     <p className="text-sm leading-7 text-white/80">
-                      Software Engineer focused on building web applications, AI-powered tools, and automation systems using Next.js, TypeScript, Node.js, PostgreSQL, and modern cloud technologies.
+                      Data Scientist and AI Engineer focused on analytics, machine learning, automation, and intelligent systems. I turn raw data into actionable business insights and predictive models.
                     </p>
                     <p className="text-sm leading-7 text-white/80 mt-2">
-                      I enjoy solving real-world problems through software, workflow automation, and scalable system design.
+                      I enjoy solving real-world problems through data analysis, workflow automation, and dashboard visualization.
                     </p>
                   </div>
                   
@@ -255,7 +253,7 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
                         <div className="flex items-start justify-between gap-4">
                           <span className="text-white/60 font-medium whitespace-nowrap">Preferred Roles:</span>
                           <span className="font-bold text-white text-right">
-                            Software, Frontend, Full Stack
+                            Data Science, AI & Analytics
                           </span>
                         </div>
                         <div className="flex items-center justify-between">
@@ -286,9 +284,6 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
               </GlassCard>
             </motion.div>
           </section>
-
-          {/* 2. Engineering Philosophy Section */}
-          <Philosophy isOpenToWork={isOpenToWork} isRecruiterContext={true} />
 
           {/* 3. Technical Impact Section */}
           <section id="impact" className="scroll-mt-28">
@@ -349,18 +344,7 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
                     <h3 className="text-3xl font-extrabold text-white mt-2">{featuredProject.title}</h3>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Button 
-                      variant="glass" 
-                      size="sm" 
-                      onClick={() => onOpenKernelAction(featuredProject.title, true)}
-                      className={cn(
-                        "text-xs font-semibold flex items-center gap-1.5 transition-all duration-300",
-                        isOpenToWork && "border-green-400/20 hover:border-green-400/40 text-green-300 hover:shadow-[0_0_20px_rgba(34,197,94,0.15)]"
-                      )}
-                    >
-                      <Terminal size={14} /> Access Dev Records
-                    </Button>
-                    <Button 
+                     <Button 
                       variant="glass" 
                       size="sm" 
                       onClick={() => window.open(featuredProject.github, "_blank")}
@@ -499,7 +483,7 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
                   <div>
                     <h3 className="text-lg font-semibold text-white">Direct Connections</h3>
                     <p className="text-sm text-white/60 mt-2 leading-6">
-                      I am actively seeking software engineer opportunities. Reach out if you need an engineer comfortable building Next.js apps, scripting API integrations, and deploying AI workflows.
+                      I am actively seeking data science and AI/analytics engineer opportunities. Reach out if you need an engineer comfortable building dashboards, training models, and scripting automated data workflows.
                     </p>
                   </div>
                   <div className="space-y-4 mt-6">
@@ -620,7 +604,7 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
               </a>
             </div>
             <div className="mt-4 pt-4 border-t border-white/5 text-center text-[10px] text-white/40">
-              Aniket Dubey &bull; Software Engineer
+              Aniket Dubey &bull; Data Scientist | AI & Analytics Engineer
             </div>
           </GlassCard>
         </aside>
@@ -689,6 +673,6 @@ export function RecruiterView({ onExitAction, isOpenToWork, onToggleOpenToWorkAc
 
   // Helper helper to check if card matches featured
   function isExpanded(title: string) {
-    return title === "Lead Intelligence Engine";
+    return title === "BeatMetrics";
   }
 }
