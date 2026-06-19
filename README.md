@@ -147,10 +147,6 @@ Data-driven dashboard analyzing hiring trends, skill demand, salary insights, an
 
 IIIT Ranchi (Joint Program with IIT Patna)
 
-### 🏫 Bachelor of Computer Applications (Data Science)
-
-Shri Ramswaroop Memorial University
-
 ---
 
 ## 🌱 Currently Learning
